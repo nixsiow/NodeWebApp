@@ -1,9 +1,9 @@
 extends ../layout
 
 block content
-  h1
+  h1.
     #{title}
-  form#formAddBlob(name="addblob", method="post",action="/blob")
+  form#formAddBlob(name="addblob", method="post",action="/blobs")
     p Name:
       input#inputName(type="text", placeholder="ex. John Smith", name="name")
     p Badge:

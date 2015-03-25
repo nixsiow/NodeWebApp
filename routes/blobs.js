@@ -19,6 +19,7 @@ router.route('/')
   .get(function(req, res, next) {
     // retrieve all blobs from Mongo
     mongoose.model('Blob').find({}, function (err, blobs) {
+      console.log(blobs)
       if (err) {
         return console.error(err);
       } else {
@@ -55,6 +56,7 @@ router.route('/')
       isloved: isloved
     }, function (err, blob) {
       if (err) {
+        console.log('errorr!!!!!!')
         res.send("There was a problem adding the information to the database.");
       } else {
         // Blob has been created

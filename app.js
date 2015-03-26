@@ -32,6 +32,7 @@ app.use('/blobs', blobs);
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
+  // console.log(req.body);
   next(err);
 });
 

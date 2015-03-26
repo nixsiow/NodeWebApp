@@ -175,7 +175,6 @@ router.put('/:id/edit', function(req, res){
   var dob = req.body.dob;
   var company = req.body.company;
   var isloved = req.body.isloved;
-
   // find the document by ID
   mongoose.model('Blob').findById(req.id, function(err, blob) {
     // update it
